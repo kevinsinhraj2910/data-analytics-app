@@ -1,0 +1,14 @@
+from selenium import webdriver
+
+def test_homepage():
+    # Initialize the WebDriver
+    driver = webdriver.Chrome()
+
+    # Navigate to the local application
+    driver.get("http://localhost:5000")
+
+    # Check if the page contains "Mean Value"
+    assert "Mean Value" in driver.page_source
+
+    # Close the browser
+    driver.quit()
